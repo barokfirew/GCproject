@@ -1,0 +1,40 @@
+{% include 'incs/head.html' %}
+  <nav class="navbar sticky-top" style="background:none">
+        <ul class="nav">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'logout' %}">LOGOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">PACKAGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">HOTELS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">DASHBOARD</a>
+        </li>
+             {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">LOGIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'packages' %}">PACKAGES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">FLIGHTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">HOTELS</a>
+        </li>
+      </ul>
+      {% endif %}
+  </nav>
+{% block content %}
+{% endblock %}
