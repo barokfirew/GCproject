@@ -1,1 +1,1 @@
-web: gunicorn hmss.wsgi
+web: gunicorn hotelmanage.wsgi
