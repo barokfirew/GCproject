@@ -17,8 +17,7 @@ class CreateUserForm(UserCreationForm):
 class CreateEmployeeForm(ModelForm):
     class Meta:
         model = Employee
-        fields = ['username', 'first_name', 'last_name',
-                  'email', 'password1', 'password2''phoneNumber', 'salary']
+        fields = ['phoneNumber', 'salary']
 
 
 class editEmployee(ModelForm):
