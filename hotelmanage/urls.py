@@ -87,6 +87,7 @@ urlpatterns = [
          deleteAnnouncement, name="deleteAnnouncement"),
     path('deleteBooking/<str:pk>/', deleteBooking, name="deleteBooking"),
     path('completeTask/<str:pk>/', completeTask, name="completeTask"),
+    path('static/<path:path>/', serve, {'document_root': settings.STATIC_ROOT, }),
 
 
     re_path(r'^media/(?P<path>.*)$',  serve, {'document_root':       settings.MEDIA_ROOT}),
